@@ -6,7 +6,7 @@ package helper;
  * @version (program version)
  */
 
-public class Base_A05Q2
+public class Base_A06Q2
 {
     /**
      * Program entry point for drop-out stack testing.

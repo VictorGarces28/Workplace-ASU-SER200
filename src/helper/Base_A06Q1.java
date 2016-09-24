@@ -8,7 +8,7 @@ package helper;
  */
 import java.util.Arrays;
 
-public class Base_A05Q1
+public class Base_A06Q1
 {
     /**
      * Program entry point for stack testing.
@@ -17,9 +17,7 @@ public class Base_A05Q1
     public static void main(String[] args)
     {
         ArrayStack<Integer> stack = new ArrayStack<Integer>();
-        
         System.out.println("STACK TESTING");
-        
         stack.push(3);
         stack.push(7);
         stack.push(4);
@@ -29,10 +27,9 @@ public class Base_A05Q1
         stack.push(8);
         System.out.println(stack.peek());        
         System.out.println(stack.pop());
-        System.out.println(stack.peek());        
-        
+        System.out.println(stack.peek()); 
         System.out.println("The size of the stack is: " + stack.size());
-        System.out.println("The stack contains:\n" + stack.toString());        
+        System.out.println("The stack contains:\n" + stack.toString());  
     }
     
     /**
@@ -44,7 +41,7 @@ public class Base_A05Q1
      */
     public static class ArrayStack<T> implements StackADT<T>
     {
-        private final static int DEFAULT_CAPACITY = 100;
+        private final static int DEFAULT_CAPACITY = 3;
     
         private int top;  
         private T[] stack;
@@ -119,7 +116,6 @@ public class Base_A05Q1
         {
             if (isEmpty())
                 throw new EmptyCollectionException("stack");
-    
             return stack[top-1];
         }
     
@@ -129,8 +125,16 @@ public class Base_A05Q1
          */
         public boolean isEmpty()
         {
-            //TODO: Implement me.
-            return false;
+        	boolean x = false ;
+        	if (top != 0)
+        	{
+            x=stack[(top-1)]==null;
+        	}
+        	else 
+        	{
+            x=stack[(top)]==null;
+        	}
+        	return x;
         }
      
         /**
@@ -139,8 +143,7 @@ public class Base_A05Q1
          */
         public int size()
         {
-            //TODO: Implement me.
-            return 0;
+            return top;
         }
 
         /**
@@ -152,8 +155,14 @@ public class Base_A05Q1
          */
         public String toString()
         {
-            //TODO: Implement me.
-            return "";
+            String result = "";
+            int k =top-1;
+            while (k >=0)
+            {
+               result = result + stack[k] + "\n";
+               k--;
+            }
+            return result;
         }
     }
 }
