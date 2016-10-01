@@ -1,4 +1,4 @@
-package work;
+package assignment7;
 
 /**
  * DequeADT defines the interface to a deque collection.

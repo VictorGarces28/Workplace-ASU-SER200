@@ -1,15 +1,17 @@
-package work;
+package assignment7;
 
 /**
- * Write a description of the program here.
+ * Implementation of LinkedStack using LinearNode to add, remove a node 
+ * and do some operation on nodes.
  * 
- * @author Lewis et al., (your name)
- * @version (program version)
+ * Completion time: 2 hours
+ * 
+ * @author Kiran Gautam
+ * @version V1.0
  */
 
-import java.util.Iterator;
 
-public class Base_A07Q1
+public class Gautam_A07Q1
 {
     /**
      * Program entry point for stack testing.
@@ -33,9 +35,8 @@ public class Base_A07Q1
         System.out.println(stack.peek());        
         System.out.println(stack.pop());
         System.out.println(stack.peek());        
-        
-        System.out.println("The size of the stack is: " + stack.size());
-        System.out.println("The stack contains:\n" + stack.toString());        
+       System.out.println("The size of the stack is: " + stack.size());
+       System.out.println("The stack contains:\n" + stack.toString());        
     }
     
     /**
@@ -97,8 +98,7 @@ public class Base_A07Q1
          */
         public T peek() throws EmptyCollectionException
         {
-            //TODO: Implement me.
-            return null;
+            return top.getElement();
         }
     
         /**
@@ -107,8 +107,7 @@ public class Base_A07Q1
          */
         public boolean isEmpty()
         {
-            //TODO: Implement me.
-            return false;
+            return top == null;
         }
      
         /**
@@ -117,8 +116,7 @@ public class Base_A07Q1
          */
         public int size()
         {
-            //TODO: Implement me.
-            return 0;
+            return count;
         }
     
         /**
@@ -130,8 +128,19 @@ public class Base_A07Q1
          */
         public String toString()
         {
-            //TODO: Implement me.
-            return "";
-        }
+        	String k = "";
+        	if (top==null)
+        		k = "empty";
+        	else
+        	{
+        		while(top!=null)
+        		{
+        		k = k + top.getElement().toString();
+        		k += "\n";
+        		top = top.getNext();
+        		}
+        	}
+        return k;
+}
     }
 }

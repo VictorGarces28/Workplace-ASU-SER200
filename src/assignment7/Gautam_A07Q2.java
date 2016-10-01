@@ -1,13 +1,16 @@
-package work;
+package assignment7;
 
 /**
- * Write a description of the program here.
+ * Implementation of LinkedQueue useing LinearNode to create a queue, remove a queue 
+ * and do some operations on the queue.
  * 
- * @author Lewis et al., (your name)
- * @version (program version)
+ * Completion time: 2 hours
+ * 
+ * @author Kiran Gautam
+ * @version V1.0
  */
 
-public class Base_A07Q2
+public class Gautam_A07Q2
 {
     /**
      * Program entry point for queue testing.
@@ -18,7 +21,6 @@ public class Base_A07Q2
         LinkedQueue<Integer> queue = new LinkedQueue<Integer>();
         
         System.out.println("QUEUE TESTING");
-        
         queue.enqueue(3);
         queue.enqueue(7);
         queue.enqueue(4);
@@ -31,9 +33,8 @@ public class Base_A07Q2
         System.out.println(queue.first());        
         
         System.out.println("The size of the queue is: " + queue.size());
-        System.out.println("The queue contains:\n" + queue.toString());        
+        System.out.println("The queue contains:\n" + queue.toString());       
     }
-    
     /**
      * LinkedQueue represents a linked implementation of a queue.
      * 
@@ -100,8 +101,9 @@ public class Base_A07Q2
          */
         public T first() throws EmptyCollectionException
         {
-            //TODO: Implement me.
-            return null;
+        	if (head == null)
+        		throw new EmptyCollectionException("queue");
+            return head.getElement();
         }
     
         /**
@@ -110,8 +112,7 @@ public class Base_A07Q2
          */
         public boolean isEmpty()
         {
-            //TODO: Implement me.
-            return false;
+            return head == null;
         }
      
         /**
@@ -120,8 +121,7 @@ public class Base_A07Q2
          */
         public int size()
         {
-            //TODO: Implement me.
-            return 0;
+            return count;
         }
     
         /**
@@ -132,8 +132,15 @@ public class Base_A07Q2
          */
         public String toString()
         {
-            //TODO: Implement me.
-            return "";
+        	String k = "";
+        	LinearNode<T> temp = head;
+        	while (temp!=null)
+        	{
+        	k += temp.getElement().toString();
+        	k += " ";
+        	temp = temp.getNext();
+        	}
+            return k;
         }
     }
 }
