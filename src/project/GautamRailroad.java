@@ -2,7 +2,7 @@ package project;
 
 import java.util.Scanner;
 
-public class Rail {
+public class GautamRailroad {
 
 	public static void main(String[] args) {
 
