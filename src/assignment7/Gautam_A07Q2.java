@@ -19,7 +19,20 @@ public class Gautam_A07Q2
     public static void main(String[] args)
     {
         LinkedQueue<Integer> queue = new LinkedQueue<Integer>();
-        
+        queue.enqueue(4);
+        queue.enqueue(3);
+        queue.dequeue();
+        queue.enqueue(7);
+        queue.enqueue(2);
+        queue.enqueue(5);
+        queue.enqueue(9);
+        queue.dequeue();
+        queue.enqueue(3);
+        queue.enqueue(9);
+        System.out.println("First: "+queue.first());
+        System.out.println("The queue contains:\n" + queue.toString());     
+
+      /*
         System.out.println("QUEUE TESTING");
         queue.enqueue(3);
         queue.enqueue(7);
@@ -33,7 +46,7 @@ public class Gautam_A07Q2
         System.out.println(queue.first());        
         
         System.out.println("The size of the queue is: " + queue.size());
-        System.out.println("The queue contains:\n" + queue.toString());       
+        System.out.println("The queue contains:\n" + queue.toString());     */  
     }
     /**
      * LinkedQueue represents a linked implementation of a queue.

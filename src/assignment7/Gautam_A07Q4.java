@@ -108,7 +108,7 @@ public class Gautam_A07Q4 {
 
 			T result = head.getElement();
 			head = head.getNext();
-			head.setPrev(null);
+			//head.setPrev(null);
 			count--;
 
 			if (isEmpty())
@@ -124,7 +124,7 @@ public class Gautam_A07Q4 {
 
 			T result = tail.getElement();
 			tail = tail.getPrev();
-			tail.setNext(null);
+			//tail.setNext(null);
 			count--;
 
 			if (isEmpty())
