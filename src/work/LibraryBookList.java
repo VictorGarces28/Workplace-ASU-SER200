@@ -38,7 +38,6 @@ public class LibraryBookList<LibraryBook> {
     return result;
     }
     
-    //get
     public LibraryBook get(int Index) throws Exception
     {
         if (isEmpty())
