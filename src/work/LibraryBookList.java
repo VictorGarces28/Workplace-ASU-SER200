@@ -12,10 +12,9 @@ public class LibraryBookList<LibraryBook> {
     	head = null;
     }
 
-    public void add(int index, LibraryBook lb)
+    public void add(int index)
     {
-    	LibraryBookNode<LibraryBook> temp = new LibraryBookNode<LibraryBook>(lb, head);
-
+    	LibraryBookNode<LibraryBook> temp = new LibraryBookNode<LibraryBook>(lb);
         temp.setNext(head);
         head = temp;
         listSize++;
@@ -80,8 +79,8 @@ public class LibraryBookList<LibraryBook> {
     	{
     		while(head!=null)
     		{
-    		k = k + head.getLibraryBook().toString();
-    		k += "\n";
+    		k = head.getLibraryBook().toString() + k;
+    		k = "\n" + k;
     		head = head.getNext();
     		}
     	}
