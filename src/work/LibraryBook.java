@@ -28,6 +28,6 @@ public class LibraryBook {
 	
 	public String toString()
 	{
-		return "Author "+author+" Title: "+title+ " Year: "+year;
+		return title +" "+ author+" "+ year;
 	}
 }

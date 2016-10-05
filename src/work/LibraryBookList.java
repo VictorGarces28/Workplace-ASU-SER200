@@ -70,23 +70,20 @@ public class LibraryBookList<LibraryBook> {
 
     public boolean isEmpty()
     {
-        return head == null;
+        return listSize == 0;
     }
 
     public String toString()
     {
     	String k = "";
-    	if (head==null)
-    		k = "empty";
-    	else
-    	{
-    		while(head!=null)
+    	LibraryBookNode<LibraryBook> temp = head;
+    		while(temp!=null)
     		{
-    		k = head.getLibraryBook().toString() + k;
+    		k = temp.getLibraryBook().toString() + k;
     		k = "\n" + k;
-    		head = head.getNext();
+    		temp = temp.getNext();
     		}
-    	}
+    	
     return k;
 }
 }
