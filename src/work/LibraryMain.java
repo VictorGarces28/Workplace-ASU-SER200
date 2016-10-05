@@ -12,10 +12,9 @@ public class LibraryMain {
 		book.add(1, book1);
 		book.add(2, book2);
 		book.add(3, book3);
-		System.out.println(book.toString());
-		System.out.println(book.getSize());
-		System.out.println(book.contains(book1));
-		
+		//System.out.println(book.toString());
+		//System.out.println(book.getSize());
+		System.out.println("bol "+book.contains(book1));	
 	}
 
 }

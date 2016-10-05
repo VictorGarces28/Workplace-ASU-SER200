@@ -4,8 +4,8 @@ public class LibraryBookNode<LibraryBook> {
 	private LibraryBookNode<LibraryBook> next;
 	private LibraryBook data;
 
-	public LibraryBookNode(LibraryBook data, LibraryBookNode<LibraryBook> node) {
-		next = node;
+	public LibraryBookNode(LibraryBook data) {
+		next = null;
 		this.data = data;
 	}
 

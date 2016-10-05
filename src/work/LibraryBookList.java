@@ -12,7 +12,7 @@ public class LibraryBookList<LibraryBook> {
     	head = null;
     }
 
-    public void add(int index)
+    public void add(int index, LibraryBook lb)
     {
     	LibraryBookNode<LibraryBook> temp = new LibraryBookNode<LibraryBook>(lb);
         temp.setNext(head);
@@ -24,13 +24,16 @@ public class LibraryBookList<LibraryBook> {
     {
     	boolean result = false;
     	
-    	while(head!=null)
+    	for (int i=0;i<listSize;i++)
 		{
-    		if(head.getLibraryBook().equals(lb));
+    		if(head.getLibraryBook().toString()==lb.toString());
     		{
+    			System.out.println("a: "+head.getLibraryBook().toString());
+    			System.out.println("b: "+lb.toString());
+
     		result = true;
     		}
-    		head.getNext();
+    		head = head.getNext();
 		}
     return result;
     }
