@@ -1,5 +1,15 @@
 package project;
 
+/**
+ * Structure of LinkedDeque collection.
+ * 
+ * Completion time: 1 hr
+ * 
+ * @author Kiran Gautam
+ * @version 1.0
+ */
+
+
 public class LinkedDeque<T> implements DequeADT<T> {
 	private int count;
 	private LinearDoubleNode<T> head, tail;

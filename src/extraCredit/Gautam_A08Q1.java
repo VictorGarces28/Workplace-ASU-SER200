@@ -1,6 +1,15 @@
 package extraCredit;
 
-public class Gautam_A08Q01 {
+/**
+ * Library Book linked list structure.
+ * 
+ * Completion time: 2 hour
+ * 
+ * @author Kiran Gautam
+ * @version 1.0
+ */
+
+public class Gautam_A08Q1 {
 
 	public static class LibraryBook {
 

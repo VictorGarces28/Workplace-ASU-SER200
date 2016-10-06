@@ -1,5 +1,14 @@
 package project;
 
+/**
+ * Structure of LinkedQueque collection.
+ * 
+ * Completion time: 1 hr
+ * 
+ * @author Kiran Gautam
+ * @version 1.0
+ */
+
 public class LinkedQueue<T> implements QueueADT<T> {
 	private int count;
 	private LinearNode<T> head, tail; // front, back

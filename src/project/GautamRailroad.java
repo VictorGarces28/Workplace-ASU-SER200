@@ -1,5 +1,14 @@
 package project;
 
+/**
+ * Implementation of a rail road yard simulation program using linkedQueue.
+ * 
+ * Completion time: 5 hrs
+ * 
+ * @author Kiran Gautam
+ * @version 1.0
+ */
+
 import java.util.Scanner;
 
 public class GautamRailroad {
